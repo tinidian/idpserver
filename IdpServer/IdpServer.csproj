@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>52ee290f-35b7-4981-8024-27accc088bf0</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cert.pfx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="cert.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="identityserver4" Version="3.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
+    <PackageReference Include="serilog" Version="2.9.0" />
+    <PackageReference Include="serilog.aspnetcore" Version="3.2.0" />
+    <PackageReference Include="serilog.sinks.console" Version="3.1.1" />
+    <PackageReference Include="serilog.sinks.file" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+</Project>
